@@ -1,2 +1,2 @@
-
-/.*
+Latex/output/*
+!Latex/output/cv.pdf
