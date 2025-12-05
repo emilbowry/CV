@@ -1,0 +1,4 @@
+.DS_Store
+Latex/.DS_Store
+output/
+!output/cv.pdf
