@@ -1,135 +1,16 @@
-\documentclass[margin,line,pifont,palatino,courier]{res}
+% Latex/cv.tex
 
+\documentclass[margin,line]{res}
 \usepackage{pifont}
-\usepackage[latin1] {inputenc}
-% \usepackage[scale=0.75,top=1cm]{geometry}
-\usepackage[scale=0.75, top=1cm, bottom=2cm, footskip=1cm]{geometry}
-\linespread{0.9}
-%\topmargin .5in
-%\oddsidemargin -.5in
-%\evensidemargin -.5in
-%\textwidth=6.0in
- % \textheight=9.0in
-%\itemsep=0in
-%\parsep=0in
-\usepackage{fancyhdr}
-%\topmargin=0in
-%\textheight=8.5in
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt}
-\fancyhf{}
-%\cfoot{\thepage}
-%\lfoot{\textit{\footnotesize Research Statement}}
-%\rfoot{{\footnotesize Curriculum Vitae, Camden Bock, \thepage}}
-\rfoot{{\thepage}}
-
-
-\newenvironment{list1}{
-  \begin{list}{\ding{113}}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.17in}}}{\end{list}}
-\newenvironment{list2}{
-  \begin{list}{$\bullet$}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.2in}}}{\end{list}}
-
+\usepackage{url}[obeyspaces,spaces]
 \begin{document}
-\name{{\huge Emilian Joseph Bowry} 
-{\newline \footnotesize  07831799619 \quad emil.bowry@icloud.com \quad https://github.com/emilbowry/}
-\vspace*{.1in}}
-
-%\title{firstlast_cv2}
+\input{opening.tex}
 \begin{resume}
-
-  % \input{education.tex}
-
-
-  \section{\sc Experience}
-  {\bf AI Compatible} August 2025 - Current\\
-  \vspace*{-.1in}
-  \begin{itemize}
-
-  \item Developing an automated privacy policy analysis model, this included:
-  \begin{itemize} 
-  \item  Creating a Suprathreshold Stochastic Resonance (SSR) pipeline to\\ mitigate high-dimensional hubness, effectively amplifying the\\ signal-to-noise ratio of semantically related clusters.
-  \item Developing an unsupervised probabilistic consensus engine, integrating \\Expectation-Maximization (EM) and Monte Carlo simulations \\and perturbation analysis to model the topological properties\\of the embedding space.
-  \end{itemize}
-
-
-  \item Redeveloping website, full-stack web development using: Typescript, React,\\ Python, express.js, Prisma, PostgreSQL, mongoDB.
-  \item Managing cloud infrastructure, including virtual machines and networking.
-
-  \end{itemize}
-  {\bf Luucid.tech} August 2022 - October 2023\\
-  Co-founder \\
-  \vspace*{-.1in}
-  \begin{itemize}
-  \item Created novel electrochemical and material mechanisms for detecting\\ spiking-agents in beverages.
-  \item  Grant writing to organising a UK wide drug spiking prevalence assessment.
-  \end{itemize}
-
-  {\bf Atomic Media} April 2022 - August 2022
-  \\Software Development and Business Analyst Intern\\
-  \vspace*{-.1in}
-  \begin{itemize}
-  \item Full stack web development using a variety of languages and technologies.
-  \item Analysed new business opportunities and ventures, writing insight articles.
-  \item Led skill days, teaching other developers the low-end networking\\ implementations of the technologies they implement:
-
-  \quad https://github.com/emilbowry/NetworkProgrammingLesson/
-
-  \item Organised the weekly cyber-security brief about emerging threats\\ and vulnerabilities.
-  \end{itemize}
-
-  \section{\sc Additional Experience}
-
-  {\bf Phasor Average Estimator} 
-  \\
-  Developed a scale-invariant, Phasor-based Statistical Model to solve hardware jitter and \\Inter-Symbol Interference (ISI), in a Molecular Communication system.
-  \vspace*{-.1in}
-
-
-  {\bf Neural Data Analysis} 
-  \\
-  Built a simulation system for Lateral Intraparietal Cortex (LIP)\\ neurons to evaluate and test different statistical models for neuron impulses. 
-
-  Used tools, Hidden Markov Models (HMMs), Peri-Stimulus Time Histogram (PSTH),\\ Fano-Factor. Used Bayesian Inference to evaluate model brittleness and mismatch.
-
-
-  {\bf Integrated Design Project} 
-  \\  Group Project building a self-navigating robot - my contributions to the software \\lead us to coming 2nd place in a
-  University wide robotics competition.
-  \vspace*{-.1in}
-
-
-  \section{\sc Published and Open Source Software \\  \small{(See github)}}
-
-  {\bf Plotting Tools} 
-  \\Extension of the python Plotly library to conveniently visualise 4-dimensional\\ datasets. Using metaprogramming techniques to create a robust and adaptable \\framework.
-  \vspace*{-.1in}
-
-  {\bf Code Editor} 
-  \\
-  A fork of Microsoft VSCode, code editor with telemetery and LLM integrations \\removed, along with some additional features.
-
-  {\bf Monochrome} 
-  \\
-  Fork of the Black code-formatter. 
-  \section{\sc Awards and Achievements}
-  {\bf Goldman Sachs} \\ 
-  Awarded a scholarship and Engineering Spring week.
-  \vspace*{-.1in}
-
-  {\bf Imperial College London} \\
-  Awarded the President's Scholarship to Imperial College London,\\ given to the top 112 candidates that demonstrated the highest\\
-  academic excellence at interview.
-  \\ \\
-
-  Referees available upon request
-
+\input{education.tex}
+\input{experience.tex}
+\input{projects.tex}
+\input{published.tex}
+\input{achievements.tex}
 \end{resume}
+\input{footer.tex}
 \end{document}

@@ -1,3 +1,6 @@
+% Latex/res.cls
+% from `https://www.overleaf.com/latex/templates/recent-grad-resume-template/gjxncvsftpqr'
+
 % RESUME DOCUMENT STYLE -- Released 23 Nov 1989
 %    for LaTeX version 2.09
 % Copyright (C) 1988,1989 by Michael DeCorte
@@ -182,7 +185,7 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{res}[2000/05/19 v1.4b Resume class]
 
-%\DeclareOption{11pt}{\renewcommand\@ptsize{1}}
+% \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 %\DeclareOption{12pt}{\renewcommand\@ptsize{2}}
 
 \PassOptionsToClass{11pt,12pt}{article}
