@@ -2,20 +2,9 @@
 
 \par
 \textbf{Phasor Average Estimator}: % BE MORE SPECIFIC
-% An estimator that models events as a phasor. Each observation adds a new phasor to the model, allowing us to estimate where we expect to see events in the future. Modelling an event as a phasor allows us to:
-% \begin{itemize}
-% 	\item Be robust to noise and jitter: Interference of the phasors allows this to cancel out in probability
-% 	\item Handle missed signals: The phasors still process regardless of observing a signal or not.
-% 	\item React instantly to periodicity changes: Most estimators would require some evidence accumulation period before it changes period regime, this just spins a new phasor.
-% 	\item Handle false positives: A new phasor adds to the bank, adding a different frequency component, however until repeated signals are observed, this does not counteract the dominant frequencies.
-% 	\item Make reasonable predictions arbitrarily far into the future, given the events we have seen.
-% 	\item Does not require any exogenous and somewhat arbitrary values like damping ratio since the energy can be bound.
-% 	\item Scale-Invariant: Can handle signals in arbitrary time-frames and amplitudes
-% \end{itemize}
-% The result was a Zero-Lag, Non-Parametric, Recursive Bayesian Estimator to solve issues with hardware jitter and Inter-Symbol Interference (ISI), and sensor saturation in a Molecular Communication system.
-A Non-parametric, Recursive Bayesian Estimator that modelled event streams as a superposition of phasors, enabling instantaneous adaptation to periodicity shifts. It allows us to:
+A Non-parametric, Recursive Bayesian Estimator that modelled event streams as a superposition of phasors, enabling Zero-Lag estimation. It allows us to:
 \begin{itemize}
-	\item Filter noise, jitter, and false positives via phase interference without requiring evidence accumulation windows.
+	\item Filter noise and jitter, via phase interference without requiring evidence accumulation windows.
 	\item Normalise likelihoods via magnitude-weighted Phase Coherence, utilising the Triangle Inequality to guarantee a probability space $\in [0,1]$ regardless of amplitude variance.
 	\item Eliminate arbitrary exogenous hyperparameters via these natural geometric bounds.
 \end{itemize} 
@@ -42,7 +31,7 @@ A Non-parametric, Recursive Bayesian Estimator that modelled event streams as a 
 % 1. 
 % 	- Signal noise, jitter and instability to estimate ground truth in a communication signal.
 % 	- Requirement for instant reactions
-%   - Zero-Lag Estimation: Unlike moving averages which introduce phase lag, phasor summation preserves phase information.
+%   - : Unlike moving averages which introduce phase lag, phasor summation preserves phase information.
 
 % 2. Control theory, error control, probability, and circular mathematics, frequency analysis, baysian inference (to discount other models)
 
