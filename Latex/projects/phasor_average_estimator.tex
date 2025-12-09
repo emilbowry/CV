@@ -13,7 +13,6 @@ An estimator that models each event as a phasor. Each observation adds a new pha
 	\item Scale-Invariant: Can handle signals in arbitrary time-frames and amplitudes
 \end{itemize}
 This was built to solve issues with hardware jitter and Inter-Symbol Interference (ISI), and sensor saturation in a Molecular Communication system.
-% Developed a scale-invariant, Phasor-based Statistical Model to solve hardware jitter and Inter-Symbol Interference (ISI), in a Molecular Communication system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1.             What does it solve or fix?                %
@@ -27,7 +26,11 @@ This was built to solve issues with hardware jitter and Inter-Symbol Interferenc
 % 1. 
 % 	- Signal noise, jitter and instability to estimate ground truth in a communication signal.
 % 	- Requirement for instant reactions
+%   - Zero-Lag Estimation: Unlike moving averages which introduce phase lag, phasor summation preserves phase information.
+
 % 2. Control theory, error control, probability, and circular mathematics, frequency analysis, baysian inference (to discount other models)
-% 3. Simulates binary signals as complex, time-evolving wave-forms of information
+
+% 3.a Simulates binary signals as complex, time-evolving wave-forms of information
+% 3.b Non-parametric State Estimation: It adapts without needing pre-tuned hyperparameters (like a damping ratio).
 % 4. Not really, but uses simple techniques in a unique way
 % 5. Finalise readme and diagrams and comments in published repo
