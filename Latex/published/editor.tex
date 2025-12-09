@@ -22,20 +22,17 @@ A fork of Microsoft VSCode that:
 % 6.     Does it require any extra work or changes?        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% 1. Telemetry issues, software bloat and privacy
-% 1.b Supply Chain Security, emoving telemetry "at the source" rather than just blocking the URL (network level), you guarantee that data never leaves the memory buffer.
+% 1.a Removing bloat from LLM, MCP and agetic AI integrations
+% 1.b Supply Chain Security, removing telemetry "at the source" rather than just blocking the URL (network level), you guarantee that data never leaves the memory buffer.
 
-% 2. 
-%     - Adapting to **massive**  professional code-base in order to make direct, and targetted modifications, as well as large scale modifications
-%     - Undestanding of CI/CD pipelines (useful relation to my own development of one for AI compatible web stuff)
-%     - Comprimising to version lock in and future api issues
-%     - Build System management: Compiling complex Electron apps from source
-%     - Privacy Engineering: Auditing code for data exfiltration points.
+% 2. Brownfield Development: Navigating, understanding, and modifying a massive,, and foreign codebase (Microsoft VSCode) without causing regression errors.
+%     - Identifing and surgically removing deeply coupled subsystems (Telemetry/LLMs) without crashing the application. This requires tracing execution paths across thousands of files.
+% 2.b API Design & Shimming: "Rectifying internal APIs" writing Interface Adapters. When i removed a subsystem, i had to create dummy interfaces or valid return states so dependent modules wouldn't panic—a critical skill for maintaining system stability.
+% 2.c Polyglot Adaptability: Learning a new language (TypeScript/Electron framework) by reading production-grade code rather than tutorials.
+% 2.d Privacy Engineering: Auditing code for data exfiltration points.
+% 2.e Comprimising to version lock in and future api issues
+% 2.f Build System management: Compiling complex Electron apps from source, Undestanding of CI/CD pipelines (useful relation to my own development of one for AI compatible web stuff)
 
-% - Brownfield Development: The ability to navigate, understand, and modify a massive, undocumented, and foreign codebase (Microsoft VSCode) without causing regression errors.
-% -  Identifing and surgically removing deeply coupled subsystems (Telemetry/LLMs) without crashing the application. This requires tracing execution paths across thousands of files.
-% - API Design & Shimming: "Rectifying internal APIs" writing Interface Adapters. When i removed a subsystem, i had to create dummy interfaces or valid return states so dependent modules wouldn't panic—a critical skill for maintaining system stability.
-% - Polyglot Adaptability: Learning a new language (TypeScript/Electron framework) by reading production-grade code rather than tutorials.
 % 3. **NO**
 
 % 4. **NO**
