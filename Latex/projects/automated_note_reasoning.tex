@@ -1,17 +1,19 @@
 \textbf{Automated Notes Reasoning:} 
-A system that makes inferences about my course notes. Using techniques derived from Category Theory and reverse-engineering parts of the `Obsidian Markdown Editor'.
+A system that makes inferences about my course notes, given their titles. Using techniques derived from Category Theory to deriving understand from syntax and structure to verify and generate notes, infer logical gaps, and missing objects.
+\begin{itemize}
+	\item Utilised Universal Properties (specifically Categorical Products) to programmatically define the existence of intersectional notes. This allowed the system to strictly enforce schema completeness by identifying missing `product' nodes between disjoint topics.
+	\item Modelled the relationship between Note Syntax (Grammar) and Semantic Concepts as an Adjunction. This allowed for bidirectional consistency checking: ensuring every valid grammatical title mapped to a logical object, and every logical gap could be described by a generated title. 
+	\item Utilises the note structure entirely by how they relate to these `Type Functors' (Definitions, Equations, Methods), leading to understanding of the small note category.
+\end{itemize}
+The implementation necessitated reverse engineering parts of the `Obsidian Markdown Editor', in order to have a better integration than was offered in the public API and documentation; parser design: Writing a Lexer/Parser for the custom note title grammar and knowledge graph construction: Automating the generation and verification between objects based on synr rules.
 
-% A system that makes inferences about my course notes, given their titles. Using techniques derived from Category Theory to deriving understand from syntax and structure to verify and generate notes, infer logical gaps, and missing objects.
-% The implementation necessitated reverse engineering parts of the `Obsidian Markdown Editor', in order to have a better integration than was offered in the public API and documentation; parser design: Writing a Lexer/Parser for the custom note title grammar and knowledge graph construction: Automating the generation and verification between objects based on synr rules.
-
+% \textbf{Automated Notes Reasoning:} 
+% A knowledge graph inference engine reverse-engineered into the Obsidian Markdown Editor.
 % \begin{itemize}
-% 	\item Utilised Universal Properties (specifically Categorical Products) to programmatically define the existence of intersectional notes. This allowed the system to strictly enforce schema completeness by identifying missing `product' nodes between disjoint topics.
-% 	\item Modelled the relationship between Note Syntax (Grammar) and Semantic Concepts as an Adjunction. This allowed for bidirectional consistency checking: ensuring every valid grammatical title mapped to a logical object, and every logical gap could be described by a generated title. 
-% 	\item Utilises the note structure entirely by how they relate to these `Type Functors' (Definitions, Equations, Methods), leading to understanding of the small note category.
+% 	\item Enforced Universal Properties (Categorical Products)  to programmatically identify missing intersectional nodes between disjoint topics, auto-generating necessary bridging notes.
+% 	\item Modelled the relationship between Syntax and Semantics as an **Adjunction** (Galois Connection). This mathematically guaranteed that every grammatical title mapped to a logical object, and every logical gap triggered a specific syntax generation.
+% 	\item Applied the Yoneda Lemma to classify notes solely via their morphisms to specific `Type Functors' (Definitions, Equations), allowing the system to infer note properties without parsing internal content.
 % \end{itemize}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1.             What does it solve or fix?                %
