@@ -1,8 +1,7 @@
 % Latex/cv.tex
 \documentclass[margin,line]{res}
 \usepackage{hyperref}
-\usepackage{pifont}
-\usepackage{url}[obeyspaces,spaces]
+\usepackage{url}
 \hypersetup{%
     colorlinks=true,
     linkcolor=blue,
@@ -11,11 +10,11 @@
 \begin{document}
 	\input{opening.tex}
 	\begin{resume}
-		\input{education.tex}
-		\input{experience.tex}
-		\input{projects.tex}
-		\input{published.tex}
-		\input{achievements.tex}
+		\input{education/education.tex}
+		\input{experience/experience.tex}
+		\input{published/published.tex}
+		\input{projects/projects.tex}
+		\input{achievements/achievements.tex}
 	\end{resume}
 	\input{footer.tex}
 \end{document}
