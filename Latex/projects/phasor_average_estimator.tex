@@ -2,17 +2,28 @@
 
 \par
 \textbf{Phasor Average Estimator}: % BE MORE SPECIFIC
-An estimator that models each event as a phasor. Each observation adds a new phasor to the model, allowing us to estimate where we expect to see events in the future. Modelling an event as a phasor allows us to:
-\begin{itemize}
-	\item Be robust to noise and jitter: Interference of the phasors allows this to cancel out in probability
-	\item Handle missed signals: The phasors still process regardless of observing a signal or not.
-	\item React instantly to periodicity changes: Most estimators would require some evidence accumulation period before it changes period regime, this just spins a new phasor.
-	\item Handle false positives: A new phasor adds to the bank, adding a different frequency component, however until repeated signals are observed, this does not counteract the dominant frequencies.
-	\item Make reasonable predictions arbitrarily far into the future, given the events we have seen.
-	\item Does not require any exogenous and somewhat arbitrary values like damping ratio since the energy can be bound.
-	\item Scale-Invariant: Can handle signals in arbitrary time-frames and amplitudes
-\end{itemize}
-This was built to solve issues with hardware jitter and Inter-Symbol Interference (ISI), and sensor saturation in a Molecular Communication system.
+Developed a scale-invariant, Phasor-based Statistical Model to solve hardware jitter and Inter-Symbol Interference (ISI), in a Molecular Communication system. It provided zero-lag estimation, unlike moving averages; retained phase information, unlike mixture models; and provided a non-parameteric way to estimate state.
+
+% An estimator that models events as a phasor. Each observation adds a new phasor to the model, allowing us to estimate where we expect to see events in the future. Modelling an event as a phasor allows us to:
+% \begin{itemize}
+% 	\item Be robust to noise and jitter: Interference of the phasors allows this to cancel out in probability
+% 	\item Handle missed signals: The phasors still process regardless of observing a signal or not.
+% 	\item React instantly to periodicity changes: Most estimators would require some evidence accumulation period before it changes period regime, this just spins a new phasor.
+% 	\item Handle false positives: A new phasor adds to the bank, adding a different frequency component, however until repeated signals are observed, this does not counteract the dominant frequencies.
+% 	\item Make reasonable predictions arbitrarily far into the future, given the events we have seen.
+% 	\item Does not require any exogenous and somewhat arbitrary values like damping ratio since the energy can be bound.
+% 	\item Scale-Invariant: Can handle signals in arbitrary time-frames and amplitudes
+% \end{itemize}
+% \begin{itemize}
+% 	\item Be robust to noise and jitter: Interference of the phasors allows this to cancel out in probability
+% 	\item Handle missed signals: The phasors still process regardless of observing a signal or not.
+% 	\item React instantly to periodicity changes: Most estimators would require some evidence accumulation period before it changes period regime, this just spins a new phasor.
+% 	\item Handle false positives: A new phasor adds to the bank, adding a different frequency component, however until repeated signals are observed, this does not counteract the dominant frequencies.
+% 	\item Make reasonable predictions arbitrarily far into the future, given the events we have seen.
+% 	\item Does not require any exogenous and somewhat arbitrary values like damping ratio since the energy can be bound.
+% 	\item Scale-Invariant: Can handle signals in arbitrary time-frames and amplitudes
+% \end{itemize}
+% This was built to solve issues with hardware jitter and Inter-Symbol Interference (ISI), and sensor saturation in a Molecular Communication system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1.             What does it solve or fix?                %
