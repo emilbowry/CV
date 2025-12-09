@@ -2,13 +2,13 @@
 Built a simulation framework for simulating Lateral Intraparietal Cortex (LIP) neurons. The core objective was to evaluate and test different statistical models for neuron impulses.
 The framework included:
 \begin{itemize}
-	\item Common interface for simulation parameters and to run simulations of different models: Ramp, Step, Hidden Markov Model Approximations.
-	\item Normalised methods to run statistical analysis on these simulations, i.e Peri-Stimulus Time Histogram, Fano-Factor.
-	\item Cache and save simulation results in a database for later analysis.
-	\item Centralise transformation between different formats, like ones appropriate for histograms, spike rasters and the ability to apply smoothing and other functions to the data.
-	\item Graphing capability to easily evaluate each model and the variations it has due to different parameters, including 3D graphs and mutatable plots with sliders, showing how the surface changes as we vary parameters
+	\item Utilised Stochastic Differential Equations (SDEs) as a model for Neuron Impulses `step/ramp models'
+	\item Assesed HMM approximations of the SDEs
+	\item Developed a ETL (Extract, Transform, Load) process for scientific data, instead of directly using the lab's given methods.
+	\item Used Baysian Inference to fit model parameters, and quantify model mismatch and brittleness.
 \end{itemize}
-This framework was then used to do some larger analysis like evaluating model brittleness and mismatch.
+
+% note the ETL and analysis directly influenced the creation of my plotting tool
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1.             What does it solve or fix?                %
