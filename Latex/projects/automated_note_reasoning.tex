@@ -1,11 +1,18 @@
 \textbf{Automated Notes Reasoning:} 
 \ifattr{math_based}{%
-A knowledge graph inference engine.
+A knowledge graph inference engine that:
+\ifattr{catagorical}{%
 \begin{itemize}
     \item Enforced Universal Properties (Categorical Products) to programmatically identify missing intersectional nodes between disjoint topics, automatically generating bridging notes.
     \item Modelled the relationship between Syntax and Semantics as an Adjunction (Galois Connection), guaranteeing that every grammatical title maps to a logical object.
     \item Applied the Yoneda Lemma to classify notes solely via their morphisms to specific `Type Functors' (Definitions, Equations), enabling property inference without content parsing.
-\end{itemize}
+\end{itemize}}
+{%
+    \begin{itemize}
+        \item Programmatically identified semantic gaps by detecting missing nodes at the intersection of related objects, automatically generating placeholders to maintain graph connectivity.
+        \item Enforced a structural schema that binds grammatical titles to objects, ensuring data integrity without manual tagging.
+        \item Implemented a purely relational classification system where objects are defined solely by their connectivity to other primitives, enabling property inference without content parsing.
+    \end{itemize}}
 }{%
 A system that makes inferences about my course notes. Using techniques derived from Category Theory and reverse-engineering parts of the `Obsidian Markdown Editor'.
 }
