@@ -1,12 +1,21 @@
-% \title{\textbf{AST Debug Logger:}}
-% \location{%
-%     \makebox[0pt][r]{{\small{\url{https://github.com/emilbowry/AST-Debugger}}}} 
-% }
-% \begin{position}
-% \par
-\textbf{AST Debug Logger:}
+
+\ifattr{web_based}{%
+\title{\textbf{AST Debug Logger:}} 
+\location{%
+    \makebox[0pt][r]{{\small{\url{https://github.com/emilbowry/editor}}}}
+}
+\begin{position}
+\vspace*{-0.15in}
+\par
+}{}
+
+
+\ifattr{math_based}{\textbf{AST Debug Logger:}}{}
 A debugging tool that intercepts python code before execution to toggle any `debug' flags, even from orphans and disconnected nested code. It also intercepts and saves a logs.
-% \end{position}
+
+\ifattr{web_based}{%
+\end{position}
+}{}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

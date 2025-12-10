@@ -1,6 +1,6 @@
 \textbf{Module Type Objects:} % Is this even useful
-Built a parallel object system using modules as the core components in python to allow for more flexible and better controlled attributes.
-Used to prototype experimenting with Kleene's 3-VL with the native python singletons (True, False and None) and symmetrise or/and short circuiting.
+Built a parallel object system using modules as the core components in python to allow for more flexible and better controlled attributes.%
+\ifattr{math_based}{Used to prototype experimenting with Kleene's 3-VL with the native python singletons (True, False and None) and symmetrise or/and short circuiting.}{}
 
 
 
@@ -12,73 +12,3 @@ Used to prototype experimenting with Kleene's 3-VL with the native python single
 % 5.     Does it implement any novel optimisations?        %
 % 6.     Does it require any extra work or changes?        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Don't even know if this was useful or a dead-end, need to characterise performance gains
-
-
-% 1. Inconvient language restrictions in python 
-% 2. Deep understanding of the python language, underlying CPython low-level implementations
-% 3. Using modules as a parallel object system
-% 4. **NO*
-% 5.a Potentially significantly lower overhead for processing objects
-% 5.b Namespace Lookup Optimization: Bypassing standard __dict__ lookups for static module properties.
-% 6. **Important, time efficiency characterisations**, finalise + publish
-
-
-% ## Ideas for making a  3VL
-
-
-% ## Quick and light "patch" of "not"
-% from types import ModuleType
-
-% ## === Redefining not operator  ===
-% def _Not():
-% 	def __pow__(x, truth=None):
-% 		return (truth, not bool(truth))[truth is bool(truth)]	#!!! Core logic!!!
-
-% 	# Implementation Detail of a well behaved not, not very important
-% 	a = type("not", (ModuleType,), {"__pow__": __pow__})
-% 	singleton = a(f"not")
-% 	del a
-% 	return singleton
-
-
-% not_ = _Not()	# Abusing ModuleType for v lightweight module object as a pseudo operator
-
-
-% ## === Redefining Kleene 3VL  ===
-% # To implement Kleene 3VL with impl:= (not A) or B we must symmetrise `or` and `and`
-
-
-% def _or(i, v):
-% 	return (i or v) or not_ ** ((not_**i) and not_**v)	# Kleene Or
-
-
-% def _and(i, v):
-% 	return (not_ ** ((not_**i) or not_**v)) and (i and v)	# Kleene And
-
-% # Leads to clumsage uses like _or(not_**i, v)
-
-
-
-% ## === Alternative Definition I  ===
-
-% # Alterntivaly we can just define impl:= not (A and not B), i.e not_**(A and not_**), and retain the original assymetric `and` and `or`
-
-
-% ## === Alternative Definition I  ===
-% # I cant remember why I chose to monkeypatch `not` so it `not None = None` do I even need to do that
-
-
-
-% ## === Test Block ===
-% x = [False, None, True]
-
-% for i in x:
-% 	for v in x:
-
-% 	# c = _and(i, v)
-% 	# c = not i
-% 	# c = _or(i, v)
-% 	# c = _or(not_**i, v)
-% 	# print(f"{i}, {v} = {c}")

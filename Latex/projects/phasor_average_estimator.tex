@@ -1,23 +1,16 @@
 % Latex/projects/phasor_average_estimator.tex
 
 \par
-\textbf{Phasor Average Estimator}: % BE MORE SPECIFIC
+\textbf{Phasor Average Estimator}:
+\ifattr{math_based}{
 A Non-parametric, Recursive Bayesian Estimator that modelled event streams as a superposition of phasors, enabling Zero-Lag estimation. It allows us to:
 \begin{itemize}
 	\item Filter noise and jitter, via phase interference without requiring evidence accumulation windows.
 	\item Normalise likelihoods via magnitude-weighted Phase Coherence, utilising the Triangle Inequality to guarantee a probability space $\in [0,1]$ regardless of amplitude variance.
 	\item Eliminate arbitrary exogenous hyperparameters via these natural geometric bounds.
-\end{itemize} 
-% \begin{itemize}
-% 	\item Be robust to noise and jitter: Interference of the phasors allows this to cancel out in probability
-% 	\item Handle missed signals: The phasors still process regardless of observing a signal or not.
-% 	\item React instantly to periodicity changes: Most estimators would require some evidence accumulation period before it changes period regime, this just spins a new phasor.
-% 	\item Handle false positives: A new phasor adds to the bank, adding a different frequency component, however until repeated signals are observed, this does not counteract the dominant frequencies.
-% 	\item Make reasonable predictions arbitrarily far into the future, given the events we have seen.
-% 	\item Does not require any exogenous and somewhat arbitrary values like damping ratio since the energy can be bound.
-% 	\item Scale-Invariant: Can handle signals in arbitrary time-frames and amplitudes
-% \end{itemize}
-% This was built to solve issues with hardware jitter and Inter-Symbol Interference (ISI), and sensor saturation in a Molecular Communication system.
+\end{itemize}}{
+Developed a scale-invariant, Phasor-based Statistical Model to solve hardware jitter and Inter-Symbol Interference (ISI), in a Molecular Communication system. It provided zero-lag estimation, unlike moving averages; retained phase information, unlike mixture models; and provided a non-parameteric way to estimate state.
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1.             What does it solve or fix?                %
@@ -28,14 +21,3 @@ A Non-parametric, Recursive Bayesian Estimator that modelled event streams as a 
 % 6.     Does it require any extra work or changes?        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% 1. 
-% 	- Signal noise, jitter and instability to estimate ground truth in a communication signal.
-% 	- Requirement for instant reactions
-%   - : Unlike moving averages which introduce phase lag, phasor summation preserves phase information.
-
-% 2. Control theory, error control, probability, and circular mathematics, frequency analysis, baysian inference (to discount other models)
-
-% 3.a Simulates binary signals as complex, time-evolving wave-forms of information
-% 3.b Non-parametric State Estimation: It adapts without needing pre-tuned hyperparameters (like a damping ratio).
-% 4. Not really, but uses simple techniques in a unique way
-% 5. Finalise readme and diagrams and comments in published repo

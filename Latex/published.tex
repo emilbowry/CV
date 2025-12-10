@@ -1,18 +1,20 @@
 
-\begin{format}
+\ifattr{math_based}{}{\begin{format}
 \title{l} \location{r}  \\
 \body%
 \end{format}
 \section{Published and Open Source Software}
 \input{published/plt.tex}
 \input{published/editor.tex}
-\input{published/ast_deb.tex}
+\input{published/ast_deb.tex}}
 
-% \input{published/monochrome.tex}
-% \input{published/ast_deb.tex}
-% \input{published/algor_trad.tex}
-
-
+\ifattr{web_based}{
+\input{published/monochrome.tex}
+%
+\input{published/algor_trad.tex} 
+%
+% ommited from quant applications since this is trivial textbook stuff, and the space is better spent elsewhere
+}{}
 
 
 

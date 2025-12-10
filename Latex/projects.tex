@@ -1,9 +1,12 @@
 % chktex-file 8
 \section{Projects and Additional Experience}
 \par
-\input{published/plt.tex}
+\ifattr{math_based}
+{\input{published/plt.tex}
 \input{published/editor.tex}
 \input{published/ast_deb.tex}
+}{
+}
 \input{projects/phasor_average_estimator.tex}
 
 \input{projects/neuronal_data_analysis.tex}

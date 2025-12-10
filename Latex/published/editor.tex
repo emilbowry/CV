@@ -1,17 +1,31 @@
-% \title{\textbf{Code Editor:}} % ADD SPECIFIC TAKEAWAYS
-% \location{%
-%     \makebox[0pt][r]{{\small{\url{https://github.com/emilbowry/editor}}}}
-% }
-% \begin{position}
-% \vspace*{-0.25in}
-% \par
-\textbf{Code Editor:}
+
+
+\ifattr{web_based}{%
+\title{\textbf{Code Editor:}}  % ADD SPECIFIC TAKEAWAYS
+\location{%
+    \makebox[0pt][r]{{\small{\url{https://github.com/emilbowry/editor}}}}
+}
+\begin{position}
+\vspace*{-0.15in}
+\par
+}{}
+
+
+\ifattr{math_based}{\textbf{Code Editor:}
 A fork of Microsoft VSCode that:
 \begin{itemize} 
         \item Improves supply chain security by removing telemetry ``at the source''.
         \item Removes LLM, MCP and agentic AI integrations and bloat.
-        \item Adds new features, like a persistent homepage, and cross-codebase note taking system
+        \item Adds new features, like a persistent homepage, and cross-codebase note taking system.
 \end{itemize}
+}{}
+
+\ifattr{web_based}{%
+A fork of Microsoft VSCode that: Improves supply chain security by removing telemetry ``at the source'';  Removes LLM, MCP and agentic AI; and adds  new features, like a persistent homepage, and cross-codebase note taking system.
+\end{position}
+}{
+}
+
 % \end{position}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

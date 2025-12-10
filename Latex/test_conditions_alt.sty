@@ -1,0 +1,60 @@
+% % \def\True{\True}
+% % \def\False{\False}
+
+% % % \newcommand{\isequal}[2]{%
+% % %   \ifcsname eq@#1@#2\endcsname
+% % %     \True
+% % %   \else
+% % %     \False
+% % %   \fi
+% % % }
+
+% % \newcommand{\isequal}[2]{%
+% %   \begingroup
+% %     \edef\A{#1}%
+% %     \edef\B{#2}%
+% %     \ifx\A\B
+% %       \endgroup\True
+% %     \else
+% %       \endgroup\False
+% %     \fi
+% % }
+
+% % \newcommand{\isnot}[1]{%
+% %   \isequal{#1}{\False}%
+% % }
+
+% % \newcommand{\andbool}[2]{%
+% %   \isequal{%
+% %     \isequal{#1}{\True}%
+% %   }{%
+% %     \isequal{#2}{\True}%
+% %   }%
+% % }
+
+% % \edef\a{\isequal{draft}{draft}}   % → \True
+% % \edef\b{\isequal{final}{draft}}   % → \False
+
+% % \edef\c{\andbool{\a}{\b}}         % → \False
+% \def\True{\True}
+% \def\False{\False}
+
+% \newcommand{\setattr}[2]{%
+%   \expandafter\def\csname attr@#1\endcsname{#2}%
+% }
+
+% \newcommand{\getattr}[1]{%
+%   \csname attr@#1\endcsname
+% }
+
+
+% \newcommand{\isequal}[2]{%
+%   \begingroup
+%     \edef\A{#1}%
+%     \edef\B{#2}%
+%     \ifx\A\B
+%       \endgroup\True
+%     \else
+%       \endgroup\False
+%     \fi
+% }
