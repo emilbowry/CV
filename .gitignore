@@ -3,3 +3,6 @@ Latex/output/*
 to_do.md
 p.md
 local_stuff
+*.zip
+*copy
+.DS_Store
