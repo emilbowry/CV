@@ -1,5 +1,5 @@
 \textbf{Automated Notes Reasoning:} 
-\ifattr{math_based}{
+\ifattr{math_based}{%
 A knowledge graph inference engine.
 \begin{itemize}
     \item Enforced Universal Properties (Categorical Products) to programmatically identify missing intersectional nodes between disjoint topics, automatically generating bridging notes.
@@ -18,3 +18,29 @@ A system that makes inferences about my course notes. Using techniques derived f
 % 6.     Does it require any extra work or changes?        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+% 1.a Identifies incomplete notes and areas for study
+% 1.b Identifies novel connections between subject
+
+% 2.a Automated Reasoning:
+% - Advanced math and logic techniques
+% - Parser Design: Writing a Lexer/Parser for the custom note title grammar.
+% - Knowledge Graph Construction: Automating the creation of edges (relationships) between nodes (notes) based on semantic rules.
+
+% 2.b Obsidian reverse engineering:
+% *[Note] this was legal due to Terms of Service, Section "Restrictions", clause iii exception cases*
+%  - Involved analyzing minified internal application logic
+%  - Internal API Research
+
+% 3. **to be characterised**
+% 4.a 
+% *   If you have a concept $A$ (ACF) and a context $B$ (Linear Systems), the specific note $A \times B$ is the **product**.
+% *   The **Universal Property** of the product states that if you have a note that pertains to both $A$ and $B$, it must factor uniquely through $A \times B$.
+% *   **The "Inference":** Your system detects that $A$ exists and $B$ exists. The Universal Property implies the *potential* existence of $A \times B$. If the node $A \times B$ is missing from the graph, the system flags it.
+% 4.b   **Left Adjoint ($F$): Free Generation.** Taking a set of keywords (e.g., "Definition", "ACF") and generating the "Free" concept structure.
+% *   **Right Adjoint ($G$): Forgetful.** Taking a complex note object and "forgetting" the content to strip it back to its underlying grammatical type.
+% *   **The Application:** An adjunction $F \dashv G$ implies a correspondence between the grammatical rules and the semantic objects. system exploits this correspondence to ensure that for every valid grammatical construction, a corresponding semantic object exists (or is created).
+% 4.c structure of notes is determined entirely by how they relate to these "Type Functors" (Definitions, Equations, Proofs), then you are effectively using the **Yoneda Lemma**: *You understand the object 'ACF' by understanding all the morphisms from 'Type' objects into it.*
+
+% 5. **to be characterised**
+% 3. **to be finalised and published**

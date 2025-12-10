@@ -1,11 +1,11 @@
 % Latex/cv.tex
-% \documentclass[line]{res}
-% \usepackage{test_conditions}
-% \setattr{math_based}
-
-\documentclass[margin, line]{res}
+\documentclass[line]{res}
 \usepackage{test_conditions}
-\setattr{web_based}
+\setattr{math_based}
+
+% \documentclass[margin, line]{res}
+% \usepackage{test_conditions}
+% \setattr{web_based}
 
 \usepackage{hyperref}
 \usepackage{url}
@@ -18,20 +18,16 @@
     urlcolor=blue,
 }
 
-
-
 \begin{document}
-
 	\input{opening.tex}
 	\begin{resume}
 		\input{education.tex}
 		\input{experience.tex}
-		\input{published.tex}
+		\input{published.tex} % moved into projects for math based
 		\input{projects.tex}
 		\input{achievements.tex}
 		\input{skills.tex}
 	\end{resume}
-	\input{footer.tex}
+	\input{footer.tex} % For math_based perhaps ill add the github to the footer since i dont explicitly mention it in my projects
 \end{document}
-
 % maybe add "Interests" section or a "Current Research" footnote to resume

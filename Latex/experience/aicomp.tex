@@ -1,4 +1,7 @@
 % chktex-file 8
+% chktex-file 46
+% chktex-file 13
+
 \employer{AI Compatible}
 \location{Remote}
 \dates{August 2025 - Current}
@@ -8,38 +11,143 @@
     \begin{itemize}
         \item \textbf{Regulatory Analysis Engine:}
         \begin{itemize} 
-        \ifattr{math_based}{
-            \item Improving and refining the Hader et al's methodology [DOI: 10.1007/s00607-024-01331-9] for a generative, and automatable process to gain more nuanced insight into privacy policy and reduce the amount of API calls.
-            \item Unsupervised semantic equivalence detection model utilises Baysian Inference, Topology, Linear Algebra, NLP techniques and Non-linear Systems analysis. Part of my system derived an analog for Random k Conditional Nearest Neighbours, a recently published technique for the classification of high-dimensional data.
-        }{
-            \item Adapted and improved state-of-the-art research on data extraction from privacy policies.
-            \item Devised an unsupervised semantic equivalence detection model of legal statements.
-        }
-       \end{itemize}
+            \ifattr{math_based}{%
+                \item Refined Hader et al.'s [DOI: 10.1007/s00607-024-01331-9] methodology to create a generative, automated process for the efficient extraction of more nuanced insights from privacy policies.
+                \item Unsupervised semantic equivalence detection model utilises Bayesian inference, topology, linear algebra, NLP techniques and non-linear systems analysis. Part of my system derived an analog for RkCNN, a recently published technique for the classification of high-dimensional data.
+            }{%
+                \item Adapted and improved state-of-the-art research on data extraction from privacy policies.
+                \item Devised an unsupervised semantic equivalence detection model of legal statements.
+            }
+        \end{itemize}
         \item \textbf{Redeveloping full-stack website:}
             \begin{itemize} 
                 \ifattr{math_based}{%
                     \item Derived a coordinate transformation system to map Non-Orthogonal Lattices onto Cartesian grids.
                     \item Utilised Dimensional Analysis to achieve area-invariant scaling across all aspect ratios.
-                    \item Modeled layout states as elements of the p2mg Wallpaper Group, proving isomorphisms between distinct stacking configurations to derive an $O(1)$ generation algorithm without iterative solvers.
+                    \item Modelled layout states as elements of the p2mg Wallpaper Group, proving isomorphisms between distinct stacking configurations to derive an $O(1)$ generation algorithm without iterative solvers.
                     \item Implemented an SVG-to-Bitmap rasterizer to render complex tessellations efficiently.
                     \item Created a perturbation-based convergence algorithm to resolve oscillations caused by circular dependencies between content and container size.
+                    \item Engineered a compile-time validation engine using TypeScript's type system to enforce strict schema correctness without runtime overhead.
                 }
                 {%
                     \item Style generation: client-side background image generator, CSS geometry engine, generalisation of CSSTypes library
-                    \item Direct style-sheet injection to handle high-performance style changes, by prevent re-rendering by modifying css rules and not the elements.
+                    \item Direct style-sheet injection to handle high-performance style changes, preventing re-rendering by modifying CSS rules rather than DOM elements.
                     \item Contextual telemetry analysis, creates interaction based profiles utilising site-entry points, device and location data to profile user events.
                     \item Managing cloud infrastructure, including virtual machines and networking.% Whats the point
                     \item Devising and prototyping HTTP and API servers from scratch using Rust.%, to learn the fundamentals
-                    \item Managing backend API with express.js, Prisma, PostgreSQL, mongoDB.
+                    \item Managing backend API with Express.js, Prisma, PostgreSQL, MongoDB.
                 }
-             
+                \item Engineered an ISO 32000 PDF generator: that maps JSON data structures into a PDF.
             \end{itemize}
-    \begin{itemize}
-    \item Engineered an ISO 32000 PDF generator: that maps JSON data structures into a PDF.
-
-    \end{itemize}
-
     \end{itemize}
 \end{position}
 
+% **Improving and refining the Hader et al's methodology.../  Adapted and improved*...*
+%     - Generative approach to derive questions, uses logical principles/type theory to model an ideal engine
+% **Unsupervised semantic equivalence detection model utilises Bayesian inference... / Devised an unsupervised...**
+%     - Bayesian inference: Expectation Maximisation, message-passing, evidence accumulation, Metropolis-Hastings algorithm and Monte-carlo simulations 
+%     - Machine learning: Clustering methods
+%     - Topology (Elbow Method) and Graph Theory (NN, Transitivity metrics), Consensus Metrics (ACCC, Jacquard)
+%     - Derived Consensus ensembles from scratch
+%     - Derived analog to RkCNN from scratch
+%     -  Uses novel techniques like Suprathreshold Stochastic Resonance (SSR), Topology
+%     - Non-linear systems: (SSR/SR), pertubation theory
+%     - Linear algebra for high dimensions (see if i can use Geometric Algebra that would be great), mahalanobis distance
+% **Style generation...**
+%     - **Derived a coordinate ...**
+%         - Allows for non-rectangual grid placement with CSS, without "transform"/"translate" to allow for animations and other UI manipulations overlayed
+%         - Allows for non-rectangual grid placement with CSS, seemless background overlays for technically disjoint elements
+%         - Had to directly monkey-patch a chrome bug `https://issues.chromium.org/issues/40918981#c_ts1687982181`
+%     - ** Utilised Dimensional...**
+%         - *Trivial*
+%     - **Modelled layout states**
+%         - A standard infinite running bond is `cmm`. However, my generative algorithm creates strict stacking constraints (isomorphic to modulo-3 partitions) that break the global vertical reflection symmetry, reducing the symmetry group to `p2mg` (primitive cell with glide reflections).
+%     - ** Implemented an SVG-to-Bitmap...**
+%         - Created a dynamic background image generator to programmatically generate complex, "tilable" background textures entirely on the client-side
+%     - **Created a perturbation-based convergence**
+%         - Walk to stable value since num lines affects width, which affects num lines
+%     - **Direct style-sheet injection...**
+%         - `euclidian torus scroll wheel`: Allows for convient UX and manipulation for arbitrarily long html elementsg, **apple doesnt do this** `https://uxdesign.cc/how-apple-fooled-users-with-fake-infinite-scroll-03fed32b112d`
+%         - CSS Injection to handle high-performance highlighting, prevent re-rendering by modifying css rules and not the elements
+%     - **Engineered a compile-time ...**
+%         - Implemented Type-Level Set Operations (Unions, Intersections, Exclusions) to mathematically define valid state transitions for UI components.
+%     - Designed a Functional Object System based on Category Theory (Functors) to model CSS inheritance as composable algebraic structures, sing prototype injection for memory-efficient property resolution.
+
+% **Contextual telemetry analysis**
+%     - *Trivial*
+% **Managing cloud infrastructure**
+% **Devising and prototyping HTTP and API servers**
+%     - Building a servers from scratch is a good way of learning a new language, very sure ive done it before but need to be specific
+% **Managing backend API**
+%     - See if i can make this more cloud related since that has been asked in interviews before, see if i can use kubernetes or something in my project directly
+% * Engineered an ISO 32000**
+%     - built a serializer from scratch to avoid bloat/dependencies. 
+%     - Implemented the ISO 32000 (PDF 1.4) Specification from scratch without external dependencies.
+%     - Engineered a raw serialization engine that manually manages the Document Object Model (Catalog, Pages, Streams) and calculates byte-level Cross-Reference (XREF) table offsets to generate valid binary files.
+%     - Designed a recursive content-wrapping algorithm to map JSON data structures into the PDF coordinate system.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1.             What does it solve or fix?                %
+% 2.          What skills does it demonstrate?             %
+% 3.         Does it use show novel techniques?            %
+% 4.    Does it use any advanced mathematical tools?       %
+% 5.     Does it implement any novel optimisations?        %
+% 6.     Does it require any extra work or changes?        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 1.a `CSS Injection`: Slow re-rendering of entire markdown-node tree
+% 1.b `Generative AI extraction`': Generate useful, structured information from diverse set of text sources
+% 1.c `Unsupervised learning pipeline`: to determine semantic and functional equivalents which is robust to `legal` meanings
+% 1.d `Hexagon Styling engine`: 
+    % - Allows for non-rectangual grid placement with CSS, without "transform"/"translate" to allow for animations and other UI manipulations overlayed
+    % - Allows for non-rectangual grid placement with CSS, seemless background overlays for technically disjoint elements
+% 1.e `euclidian torus scroll wheel`: Allows for convient UX and manipulation for arbitrarily long html elements
+% 1.f Allows for type-safe style objects with a larger use-case than CSSTypes, while being more intuitive than CSS-in-JS libraries.
+
+% 2.a `CSS Injection`: Understanding of the DOM lifecylce
+% 2.b `Generative AI extraction`: Use case for LLMs, familarity with OpenAPI schema objects
+% 2.c `Hader et al methodology': Research skills, adapting academic papers for real life implementations
+% 2.d `CSSTypes extension`: Advanced typing and using complex tools from a brand new language
+% 2.e `PDF generator`: Understanding of new protocols
+
+
+% 3.a `Suprathreshold Stochastic Resonance (SSR)' for embedding vectors as a non-linear system (RkCNN analog)
+% 3.b `Unsupervised Machine Learning pipeline` novel linguistic manipulation and preproccesing to modify the embedding manifold, ACCC metric
+% 3.c `ACCC, Jacquard` Set Theory: Determining unions/intersections of note topics to find gaps.
+% 3.d `dynamic background image generator`: Novel client side image rasterisation for css compatibility
+% 3.e `euclidian torus` utilises Topology to create a robust UI/UX for data of an undefined length
+% 3.f Topological Data Analysis (TDA): Using the "Elbow method" and connectivity constraints to define semantic clusters.
+
+% 4.a `Unsupervised Machine Learning pipeline`:
+%     - Bayesian inference: Expectation Maximisation, message-passing, evidence accumulation, Metropolis-Hastings algorithm and Monte-carlo simulations 
+%     - Machine learning: Clustering methods
+%     - Topology (Elbow Method) and Graph Theory (NN, Transitivity metrics), Consensus Metrics (ACCC, Jacquard)
+%     - Derived Consensus ensembles from scratch
+%     - Derived analog to RkCNN from scratch
+%     - Non-linear systems: (SSR/SR), pertubation theory
+%     - Linear algebra for high dimensions (see if i can use Geometric Algebra that would be great), mahalanobis distance
+% 4.b `euclidian torus`: Topology 
+% 4.c `Generative wall algorithm': Group theory
+% 4.d Typing manipulation: Type theory, variances etc
+% 4.e Manifold Learning: analyzing the topology of the embedding space.
+% 4.f Stochastic Processes: Metropolis-Hastings and Monte Carlo simulations for consensus.
+
+% 5.a `CSS Injection`:  Incredibly efficient rendering mechanism to prevent rerendering the entirity of the Markdown-trees
+% 5.b RkCNN for manipulating high dimensional, large datasets
+% 5.c `Generative AI`: Reduces the computational complexity of hader et al, and improves relevance of determined data from a mathematic/logic framework
+% 5.d `dynamic background image generator`:Client-side Compute Offloading: The generative background and geometry engine move computational load from the server to the client browser, reducing infrastructure costs.
+
+% 6. 
+
+% add and imrove readme esp around torus, pdf, walling, css types, geometry
+% add background generator snippet
+% formalise improvements to hader et all
+% - Formalise Relation to RkCNN
+% - Generate and publish demonstratable snippets of `Unsupervised Machine Learning pipeline` processes, tests, and old/discounted methodologies
+% -  Directly implement a CI/CD pipeline from scratch (inspired by ms VSCode's)
+% - break down exact example and test scripts from engine into ipynb to demonstrate the specific techniques, currently it is an un-understandable mess of spagetti code and versions from initial testing
+
+% - Geometric (Clifford) Algebra: Utilised in the high-dimensional embedding space to treat semantic relationships as multivectors rather than simple vectors. This allows for:
+%     - Rotor-based transformations: Modeling semantic shifts (e.g., negation or context changes) as rotations on the n-dimensional manifold rather than simple translations.
+%     - Bivector Analysis: Measuring the "area" or deviation between semantic vectors to capture nuanced differences that scalar metrics (like Cosine Similarity) miss.
